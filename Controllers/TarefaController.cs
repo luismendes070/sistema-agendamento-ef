@@ -1,3 +1,5 @@
+using System;
+using System.Globalization;// using DateTime;
 using Microsoft.AspNetCore.Mvc;
 using TrilhaApiDesafio.Context;
 using TrilhaApiDesafio.Models;
@@ -13,6 +15,9 @@ namespace TrilhaApiDesafio.Controllers
         public TarefaController(OrganizadorContext context)
         {
             _context = context;
+            // var client = new RestClient("https://api.myorg.com");
+            // request.AddHeader("Content-Type", "application/json");
+            // request.AddHeader("Accept", "application/json");
         }
 
         [HttpGet("{id}")]
@@ -84,7 +89,7 @@ namespace TrilhaApiDesafio.Controllers
             _context.Tarefas.Update(tarefaBanco);
             _context.SaveChanges();
 
-            return Ok();
+            return Ok(tarefa);
         }
 
         [HttpDelete("{id}")]

@@ -1,0 +1,4 @@
+<UsingTask TaskName="Microsoft.NET.Sdk.Web"
+    AssemblyName = "TargetFramework"
+    TaskFactory = "Program"
+    Condition="'x86'=='x64'" />
