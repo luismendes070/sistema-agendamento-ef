@@ -8,6 +8,7 @@ namespace TrilhaApiDesafio.Tests
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
